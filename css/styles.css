@@ -706,3 +706,281 @@ Responsive Hero
         grid-template-columns: 1fr;
     }
 }
+
+/* ==============================
+   Education
+   ============================== */
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.education-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-large);
+    padding: 2rem;
+    transition: var(--transition);
+}
+
+.education-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+.education-icon {
+    display: block;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.education-card h3 {
+    font-size: 1.4rem;
+    margin: 1rem 0 0.75rem;
+}
+
+.education-achievements {
+    padding-left: 1.25rem;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+.education-achievements li {
+    margin-bottom: 0.4rem;
+}
+
+/* ==============================
+   Shared Experience Elements
+   ============================== */
+
+.organization {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.experience-date {
+    display: inline-block;
+    color: var(--deep-navy);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.experience-status {
+    display: inline-block;
+    background-color: var(--sky-blue);
+    color: var(--deep-navy);
+    border-radius: 20px;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.employment-type {
+    color: var(--deep-navy);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.experience-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* ==============================
+   Professional Timeline
+   ============================== */
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 2.5rem;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 1.5rem;
+    bottom: 1.5rem;
+    left: 7px;
+    width: 2px;
+    background-color: var(--border);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    top: 1.5rem;
+    left: calc(-2.5rem + 1px);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--sky-blue);
+    border: 3px solid var(--background);
+    box-shadow: 0 0 0 2px var(--border);
+}
+
+.timeline-item.current::before {
+    background-color: var(--primary);
+    box-shadow: 0 0 0 2px var(--primary);
+}
+
+.timeline-card {
+    background-color: white;
+    border: 1px solid var(--surface);
+    border-radius: var(--radius-medium);
+    padding: 2rem;
+    transition: var(--transition);
+}
+
+.timeline-card:hover {
+    border-color: var(--border);
+    box-shadow: var(--shadow);
+}
+
+.timeline-card h3 {
+    font-size: 1.3rem;
+    margin: 0.75rem 0;
+}
+
+/* ==============================
+   Expandable Responsibilities
+   ============================== */
+
+.experience-details {
+    border-top: 1px solid var(--surface);
+    padding-top: 1rem;
+    margin-top: 1.5rem;
+}
+
+.experience-details summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    list-style: none;
+    color: var(--deep-navy);
+}
+
+.experience-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.experience-details summary::after {
+    content: "+";
+    font-size: 1.4rem;
+    color: var(--primary);
+}
+
+.experience-details[open] summary::after {
+    content: "−";
+}
+
+.experience-details summary:hover {
+    color: var(--primary);
+}
+
+.experience-details ul {
+    padding-left: 1.25rem;
+    margin-top: 1rem;
+}
+
+.experience-details li {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 0.75rem;
+}
+
+/* ==============================
+   Skill Tags
+   ============================== */
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.skill-tags span {
+    display: inline-block;
+    background-color: var(--surface);
+    color: var(--deep-navy);
+    padding: 0.4rem 0.85rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* ==============================
+   Technical Skills
+   ============================== */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.skill-category {
+    background-color: white;
+    border: 1px solid var(--surface);
+    border-radius: var(--radius-medium);
+    padding: 1.75rem;
+    transition: var(--transition);
+}
+
+.skill-category:hover {
+    transform: translateY(-4px);
+    border-color: var(--border);
+    box-shadow: var(--shadow);
+}
+
+.skill-category h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* ==============================
+   Responsive Experience Page
+   ============================== */
+
+@media (max-width: 900px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .education-grid,
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline {
+        padding-left: 2rem;
+    }
+
+    .timeline-item::before {
+        left: calc(-2rem + 1px);
+    }
+
+    .timeline-card {
+        padding: 1.5rem;
+    }
+}
