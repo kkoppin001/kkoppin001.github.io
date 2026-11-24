@@ -456,3 +456,253 @@ Responsive Hero
     background-color: var(--sky-blue);
     color: var(--deep-navy);
 }
+
+/* ==============================
+   Page Headings
+   ============================== */
+
+.page-heading {
+    text-align: center;
+    padding: 5rem 0 3rem;
+}
+
+.page-eyebrow {
+    display: block;
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.page-heading h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    letter-spacing: -1.5px;
+    margin-bottom: 1rem;
+}
+
+.page-heading p {
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+/* ==============================
+   About Me Introduction
+   ============================== */
+
+.about-intro {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    align-items: center;
+    gap: 5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-bio h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-bio p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* ==============================
+   Polaroid Photographs
+   ============================== */
+
+.polaroid {
+    position: relative;
+    background-color: white;
+    padding: 1rem 1rem 1.5rem;
+    border: 1px solid var(--surface);
+    box-shadow: 0 6px 20px rgba(32, 59, 92, 0.12);
+    transition: transform 0.3s ease;
+}
+
+.polaroid::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    width: 85px;
+    height: 26px;
+    background-color: rgba(164, 196, 232, 0.65);
+    transform: translateX(-50%) rotate(5deg);
+}
+
+.polaroid-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1;
+    background-color: var(--surface);
+    color: var(--primary);
+    overflow: hidden;
+}
+
+.polaroid-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.polaroid figcaption {
+    text-align: center;
+    font-family: "Bradley Hand", "Segoe Print", cursive;
+    font-size: 1.1rem;
+    color: var(--deep-navy);
+    margin-top: 1rem;
+}
+
+.about-polaroid {
+    max-width: 350px;
+    width: 100%;
+    margin: 0 auto;
+    transform: rotate(-4deg);
+}
+
+.about-polaroid:hover {
+    transform: rotate(0deg) scale(1.03);
+}
+
+/* ==============================
+   Personal Mission
+   ============================== */
+
+.mission-section {
+    padding: 2rem 0;
+}
+
+.mission-card {
+    position: relative;
+    background-color: var(--surface);
+    border-radius: var(--radius-large);
+    padding: 3rem;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.mission-card blockquote {
+    font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mission-heart {
+    display: block;
+    color: var(--primary);
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+/* ==============================
+   Interests and Hobbies
+   ============================== */
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.interest-card {
+    background-color: white;
+    border: 1px solid var(--surface);
+    border-radius: var(--radius-medium);
+    padding: 2rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.interest-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--border);
+    box-shadow: var(--shadow);
+}
+
+.interest-icon {
+    display: block;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.interest-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+}
+
+.interest-card p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* ==============================
+   Scrapbook Gallery
+   ============================== */
+
+.scrapbook-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 3rem auto;
+}
+
+.scrapbook-grid .polaroid:nth-child(1) {
+    transform: rotate(-5deg);
+}
+
+.scrapbook-grid .polaroid:nth-child(2) {
+    transform: rotate(3deg);
+}
+
+.scrapbook-grid .polaroid:nth-child(3) {
+    transform: rotate(-3deg);
+}
+
+.scrapbook-grid .polaroid:hover {
+    transform: rotate(0deg) scale(1.05);
+    z-index: 1;
+}
+
+/* ==============================
+   Responsive About Page
+   ============================== */
+
+@media (max-width: 768px) {
+    .about-intro {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .about-bio {
+        text-align: center;
+    }
+
+    .interests-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .scrapbook-grid {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+    }
+
+    .mission-card {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .interests-grid {
+        grid-template-columns: 1fr;
+    }
+}
