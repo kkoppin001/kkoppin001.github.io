@@ -551,11 +551,27 @@ Responsive Hero
 }
 
 .polaroid figcaption {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
     text-align: center;
     font-family: "Bradley Hand", "Segoe Print", cursive;
     font-size: 1.1rem;
     color: var(--deep-navy);
     margin-top: 1rem;
+}
+
+.polaroid-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.polaroid-description {
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--primary);
 }
 
 .about-polaroid {
