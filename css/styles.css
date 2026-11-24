@@ -1662,3 +1662,29 @@ a.contact-card:hover .contact-link {
     }
 
 }
+
+/* Homepage Portrait */
+
+.hero-portrait {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    aspect-ratio: 1;
+
+    margin: 0 auto;
+
+    object-fit: cover;
+    object-position: center;
+
+    border: 4px solid white;
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow);
+}
+
+@media (max-width: 768px) {
+
+    .hero-portrait {
+        max-width: 250px;
+    }
+
+}
