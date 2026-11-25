@@ -16,6 +16,7 @@
 
     <!-- Navigation -->
     <header class="header">
+
         <nav class="navbar container" aria-label="Main navigation">
 
             <a href="index.html" class="logo">KK.</a>
@@ -42,6 +43,7 @@
             </ul>
 
         </nav>
+
     </header>
 
     <main class="container projects-page">
@@ -67,13 +69,15 @@
 
             <div class="projects-grid">
 
-                <!-- WSU Classroom -->
+                <!-- ====================================== -->
+                <!-- WSU Classroom                          -->
+                <!-- ====================================== -->
+
                 <article class="project-card">
 
                     <div class="project-image">
 
                         <div class="project-badges">
-
                             <span class="project-type work">
                                 Work
                             </span>
@@ -81,11 +85,26 @@
                             <span class="project-progress in-progress">
                                 In Progress
                             </span>
-
                         </div>
 
-                        <span class="project-icon">⌨️</span>
-                        <span>Project screenshot</span>
+                        <button
+                            class="project-gallery-trigger"
+                            type="button"
+                            data-images='[
+                                "assets/images/projects/classroom.png",
+                                "assets/images/projects/classroom-2.png"
+                            ]'
+                            aria-label="View WSU Classroom gallery"
+                        >
+                            <img
+                                src="assets/images/projects/classroom.png"
+                                alt="WSU Classroom screenshot"
+                            >
+
+                            <span class="gallery-overlay">
+                                View Gallery ↗
+                            </span>
+                        </button>
 
                     </div>
 
@@ -132,18 +151,22 @@
                                     Lead development, feature planning,
                                     and continued maintenance.
                                 </li>
+
                                 <li>
                                     Automate repository creation and
                                     management for course assignments.
                                 </li>
+
                                 <li>
                                     Implement roster-based student
                                     repository creation and naming.
                                 </li>
+
                                 <li>
                                     Support GitHub organizations
                                     and template repositories.
                                 </li>
+
                                 <li>
                                     Develop configuration and
                                     installation workflows.
@@ -169,7 +192,11 @@
 
                 </article>
 
-                <!-- Death Star -->
+
+                <!-- ====================================== -->
+                <!-- Death Star                             -->
+                <!-- ====================================== -->
+
                 <article class="project-card">
 
                     <div class="project-image">
@@ -186,8 +213,25 @@
 
                         </div>
 
-                        <span class="project-icon">🛰️</span>
-                        <span>Project screenshot</span>
+                        <button
+                            class="project-gallery-trigger"
+                            type="button"
+                            data-images='[
+                                "assets/images/projects/ded.png",
+                                "assets/images/projects/ded-2.png",
+                                "assets/images/projects/ded-3.png"
+                            ]'
+                            aria-label="View Death Star gallery"
+                        >
+                            <img
+                                src="assets/images/projects/ded.png"
+                                alt="Death Star project screenshot"
+                            >
+
+                            <span class="gallery-overlay">
+                                View Gallery ↗
+                            </span>
+                        </button>
 
                     </div>
 
@@ -239,18 +283,22 @@
                                     Led frontend and software
                                     development of the project.
                                 </li>
+
                                 <li>
                                     Built an image detection pipeline
                                     using Raspberry Pi and OpenCV.
                                 </li>
+
                                 <li>
                                     Developed a Flask web application
                                     with two-factor PAT authentication.
                                 </li>
+
                                 <li>
                                     Implemented RF communication
                                     using RFM69.
                                 </li>
+
                                 <li>
                                     Deployed the application as
                                     a Linux systemd service.
@@ -263,7 +311,11 @@
 
                 </article>
 
-                <!-- KAMA DegreeAdmin -->
+
+                <!-- ====================================== -->
+                <!-- KAMA DegreeAdmin                       -->
+                <!-- ====================================== -->
+
                 <article class="project-card">
 
                     <div class="project-image">
@@ -280,8 +332,24 @@
 
                         </div>
 
-                        <span class="project-icon">🎓</span>
-                        <span>Project screenshot</span>
+                        <button
+                            class="project-gallery-trigger"
+                            type="button"
+                            data-images='[
+                                "assets/images/projects/kama.png"
+                            ]'
+                            aria-label="View KAMA DegreeAdmin gallery"
+                        >
+                            <img
+                                src="assets/images/projects/kama.png"
+                                alt="KAMA DegreeAdmin screenshot"
+                                loading="lazy"
+                            >
+
+                            <span class="gallery-overlay">
+                                View Image ↗
+                            </span>
+                        </button>
 
                     </div>
 
@@ -306,9 +374,9 @@
                         </p>
 
                         <p>
-                            A degree-planning platform designed
-                            to help students build, organize,
-                            and manage their academic plans.
+                            A degree-planning platform designed to
+                            help students build, organize, and
+                            manage their academic plans.
                         </p>
 
                         <div class="skill-tags">
@@ -329,14 +397,17 @@
                                     UI implementation, and
                                     team coordination.
                                 </li>
+
                                 <li>
                                     Implemented schedule generation
                                     and class selection.
                                 </li>
+
                                 <li>
                                     Developed permission-based
                                     user and administrator features.
                                 </li>
+
                                 <li>
                                     Supported co-op and long-term
                                     degree planning.
@@ -362,7 +433,11 @@
 
                 </article>
 
-                <!-- KPI -->
+
+                <!-- ====================================== -->
+                <!-- KPI                                    -->
+                <!-- ====================================== -->
+
                 <article class="project-card">
 
                     <div class="project-image">
@@ -379,8 +454,11 @@
 
                         </div>
 
+                        <!-- TODO: Add KPI project images -->
+
                         <span class="project-icon">📊</span>
-                        <span>Project screenshot</span>
+
+                        <span>Project screenshot coming soon</span>
 
                     </div>
 
@@ -405,10 +483,9 @@
                         </p>
 
                         <p>
-                            Koppin Personal Indicators — a
-                            local-first personal data platform
-                            designed to centralize personal
-                            statistics and insights.
+                            Koppin Personal Indicators — a local-first
+                            personal data platform designed to centralize
+                            personal statistics and insights.
                         </p>
 
                         <div class="skill-tags">
@@ -429,22 +506,26 @@
                                     Designed and developed a
                                     centralized personal API.
                                 </li>
+
                                 <li>
                                     Integrated GitHub profile,
                                     repository, and commit data.
                                 </li>
+
                                 <li>
                                     Developed activity statistics
                                     and repository insights.
                                 </li>
+
                                 <li>
                                     Implemented API error handling
                                     and structured responses.
                                 </li>
+
                                 <li>
-                                    Planned future integrations
-                                    for health, fitness, reading,
-                                    and a native macOS interface.
+                                    Planned future integrations for
+                                    health, fitness, reading, and
+                                    a native macOS interface.
                                 </li>
                             </ul>
 
@@ -467,7 +548,11 @@
 
                 </article>
 
-                <!-- yt-mp3 -->
+
+                <!-- ====================================== -->
+                <!-- yt-mp3                                 -->
+                <!-- ====================================== -->
+
                 <article class="project-card">
 
                     <div class="project-image">
@@ -484,8 +569,25 @@
 
                         </div>
 
-                        <span class="project-icon">🎧</span>
-                        <span>Project screenshot</span>
+                        <button
+                            class="project-gallery-trigger"
+                            type="button"
+                            data-images='[
+                                "assets/images/projects/yt-mp3.png",
+                                "assets/images/projects/yt-mp3-icon.png"
+                            ]'
+                            aria-label="View yt-mp3 gallery"
+                        >
+                            <img
+                                src="assets/images/projects/yt-mp3.png"
+                                alt="yt-mp3 macOS application screenshot"
+                                loading="lazy"
+                            >
+
+                            <span class="gallery-overlay">
+                                View Gallery ↗
+                            </span>
+                        </button>
 
                     </div>
 
@@ -534,22 +636,26 @@
                                     Designed a native macOS
                                     menu bar interface.
                                 </li>
+
                                 <li>
                                     Implemented audio conversion
                                     and live progress tracking.
                                 </li>
+
                                 <li>
                                     Integrated clipboard functionality
                                     and download management.
                                 </li>
+
                                 <li>
                                     Implemented background processing
                                     to maintain a responsive interface.
                                 </li>
+
                                 <li>
                                     Created a custom application icon
-                                    and packaged the application
-                                    as a standalone macOS app.
+                                    and packaged the application as
+                                    a standalone macOS app.
                                 </li>
                             </ul>
 
@@ -572,7 +678,11 @@
 
                 </article>
 
-                <!-- Pokédex -->
+
+                <!-- ====================================== -->
+                <!-- Pokédex                                -->
+                <!-- ====================================== -->
+
                 <article class="project-card">
 
                     <div class="project-image">
@@ -589,8 +699,24 @@
 
                         </div>
 
-                        <span class="project-icon">🔴</span>
-                        <span>Project screenshot</span>
+                        <button
+                            class="project-gallery-trigger"
+                            type="button"
+                            data-images='[
+                                "assets/images/projects/pokedex.png"
+                            ]'
+                            aria-label="View Pokédex gallery"
+                        >
+                            <img
+                                src="assets/images/projects/pokedex.png"
+                                alt="Pokédex website screenshot"
+                                loading="lazy"
+                            >
+
+                            <span class="gallery-overlay">
+                                View Image ↗
+                            </span>
+                        </button>
 
                     </div>
 
@@ -615,10 +741,9 @@
                         </p>
 
                         <p>
-                            An interactive Pokédex website
-                            combining my love of Pokémon with
-                            frontend development and dynamic
-                            API integration.
+                            An interactive Pokédex website combining
+                            my love of Pokémon with frontend
+                            development and dynamic API integration.
                         </p>
 
                         <div class="skill-tags">
@@ -635,21 +760,25 @@
 
                             <ul>
                                 <li>
-                                    Developed an interactive
-                                    Pokédex covering Generations 1–9.
+                                    Developed an interactive Pokédex
+                                    covering Generations 1–9.
                                 </li>
+
                                 <li>
                                     Integrated PokéAPI to retrieve
                                     Pokémon information dynamically.
                                 </li>
+
                                 <li>
                                     Designed binder-style
                                     generation navigation.
                                 </li>
+
                                 <li>
                                     Implemented Pokémon sprites,
                                     descriptions, and type information.
                                 </li>
+
                                 <li>
                                     Created color-coded Pokémon
                                     types and a responsive interface.
@@ -679,6 +808,7 @@
 
         </section>
 
+
         <!-- GitHub Call to Action -->
         <section class="github-section">
 
@@ -691,10 +821,9 @@
                 <h2>Curiosity never stops.</h2>
 
                 <p>
-                    I'm always learning, experimenting,
-                    and working on something new.
-                    Follow along with my development
-                    journey on GitHub.
+                    I'm always learning, experimenting, and
+                    working on something new. Follow along
+                    with my development journey on GitHub.
                 </p>
 
                 <a
@@ -712,11 +841,113 @@
 
     </main>
 
+
+    <!-- ====================================== -->
+    <!-- Reusable Project Gallery Modal         -->
+    <!-- ====================================== -->
+
+    <dialog
+        class="gallery-modal"
+        id="project-gallery"
+        aria-labelledby="gallery-title"
+    >
+
+        <div class="gallery-container">
+
+            <!-- Close Button -->
+            <button
+                class="gallery-close"
+                id="gallery-close"
+                type="button"
+                aria-label="Close gallery"
+            >
+                &times;
+            </button>
+
+            <!-- Main Image -->
+            <div class="gallery-image-container">
+
+                <!-- Previous Image -->
+                <button
+                    class="gallery-arrow gallery-prev"
+                    id="gallery-prev"
+                    type="button"
+                    aria-label="Previous image"
+                >
+                    &#10094;
+                </button>
+
+                <!-- Active Image -->
+                <img
+                    id="gallery-image"
+                    alt="Project preview"
+                >
+
+                <!-- Next Image -->
+                <button
+                    class="gallery-arrow gallery-next"
+                    id="gallery-next"
+                    type="button"
+                    aria-label="Next image"
+                >
+                    &#10095;
+                </button>
+
+            </div>
+
+            <!-- Image Counter -->
+            <div
+                class="gallery-counter"
+                id="gallery-counter"
+                aria-live="polite"
+            ></div>
+
+            <!-- Image Thumbnails -->
+            <div
+                class="gallery-thumbnails"
+                id="gallery-thumbnails"
+            ></div>
+
+            <!-- Project Information -->
+            <div class="gallery-information">
+
+                <h2 id="gallery-title"></h2>
+
+                <p id="gallery-description"></p>
+
+                <div
+                    class="skill-tags"
+                    id="gallery-skills"
+                ></div>
+
+                <div class="gallery-actions">
+
+                    <a
+                        id="gallery-github"
+                        class="btn btn-primary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        hidden
+                    >
+                        View on GitHub ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </dialog>
+
+
     <!-- Footer -->
     <footer class="footer">
+
         <div class="container">
             <p>Made with ♡</p>
         </div>
+
     </footer>
 
 </body>
