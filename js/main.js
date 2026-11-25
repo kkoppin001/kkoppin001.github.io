@@ -414,3 +414,11 @@ if (galleryModal) {
     });
 
 }
+
+/* ==============================
+   Lucide Icons
+   ============================== */
+
+if (typeof lucide !== "undefined") {
+    lucide.createIcons();
+}

@@ -2178,3 +2178,32 @@ body.gallery-open {
     }
 
 }
+
+/* ==============================
+   Lucide Icons
+   ============================== */
+
+.lucide {
+    width: 24px;
+    height: 24px;
+    stroke-width: 1.75;
+    color: var(--primary);
+}
+
+.card-icon .lucide,
+.interest-icon .lucide,
+.education-icon .lucide {
+    width: 36px;
+    height: 36px;
+}
+
+.contact-icon .lucide {
+    width: 32px;
+    height: 32px;
+}
+
+.project-icon .lucide,
+.resume-icon .lucide {
+    width: 56px;
+    height: 56px;
+}
