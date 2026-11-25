@@ -422,3 +422,236 @@ if (galleryModal) {
 if (typeof lucide !== "undefined") {
     lucide.createIcons();
 }
+
+
+// ======================================
+// Involvement Photo Gallery
+// ======================================
+
+const involvementGallery = document.getElementById("involvement-gallery");
+
+if (involvementGallery) {
+
+    const photoImage = document.getElementById("photo-image");
+    const photoTitle = document.getElementById("photo-title");
+    const photoCounter = document.getElementById("photo-counter");
+
+    const photoClose = document.getElementById("photo-close");
+    const photoPrev = document.getElementById("photo-prev");
+    const photoNext = document.getElementById("photo-next");
+
+    const photoSections = [
+        "#awards",
+        "#organizations",
+        "#conferences",
+        "#service"
+    ];
+
+    let activePhotos = [];
+    let activePhotoIndex = 0;
+    let lastPhotoTrigger = null;
+
+
+    // Display the selected photograph
+
+    function displayPhoto() {
+
+        const photo = activePhotos[activePhotoIndex];
+
+        photoImage.src = photo.src;
+        photoImage.alt = photo.title;
+
+        photoTitle.textContent = photo.title;
+
+        photoCounter.textContent =
+            `${activePhotoIndex + 1} of ${activePhotos.length}`;
+
+        photoPrev.hidden = activePhotos.length <= 1;
+        photoNext.hidden = activePhotos.length <= 1;
+
+    }
+
+
+    // Open the photo gallery
+
+    function openPhotoGallery(photos, index, trigger) {
+
+        activePhotos = photos;
+        activePhotoIndex = index;
+        lastPhotoTrigger = trigger;
+
+        displayPhoto();
+
+        involvementGallery.showModal();
+
+        document.body.classList.add("photo-gallery-open");
+
+        photoClose.focus();
+
+    }
+
+
+    // Close the photo gallery
+
+    function closePhotoGallery() {
+
+        involvementGallery.close();
+
+    }
+
+    involvementGallery.addEventListener("close", () => {
+
+        document.body.classList.remove("photo-gallery-open");
+
+        if (lastPhotoTrigger) {
+            lastPhotoTrigger.focus();
+        }
+
+    });
+
+
+    // Previous and next photographs
+
+    function previousPhoto() {
+
+        activePhotoIndex =
+            (activePhotoIndex - 1 + activePhotos.length)
+            % activePhotos.length;
+
+        displayPhoto();
+
+    }
+
+    function nextPhoto() {
+
+        activePhotoIndex =
+            (activePhotoIndex + 1)
+            % activePhotos.length;
+
+        displayPhoto();
+
+    }
+
+
+    // Automatically make photographs clickable
+
+    photoSections.forEach((sectionSelector) => {
+
+        const section = document.querySelector(sectionSelector);
+
+        if (!section) return;
+
+        const images = Array.from(
+            section.querySelectorAll("img")
+        );
+
+        const photos = images.map((image) => ({
+            src: image.src,
+            title: image.alt
+        }));
+
+        images.forEach((image, index) => {
+
+            const trigger = document.createElement("button");
+
+            trigger.type = "button";
+
+            trigger.className = "involvement-photo-trigger";
+
+            trigger.setAttribute(
+                "aria-label",
+                `Expand photograph: ${image.alt}`
+            );
+
+            trigger.setAttribute("aria-haspopup", "dialog");
+
+            image.parentNode.insertBefore(trigger, image);
+
+            trigger.appendChild(image);
+
+            const expandIcon = document.createElement("span");
+
+            expandIcon.className = "photo-expand-icon";
+
+            expandIcon.setAttribute("aria-hidden", "true");
+
+            expandIcon.innerHTML =
+                '<i data-lucide="maximize-2"></i>';
+
+            trigger.appendChild(expandIcon);
+
+            trigger.addEventListener("click", () => {
+
+                openPhotoGallery(photos, index, trigger);
+
+            });
+
+        });
+
+    });
+
+
+    // Gallery button events
+
+    photoClose.addEventListener("click", closePhotoGallery);
+
+    photoPrev.addEventListener("click", previousPhoto);
+
+    photoNext.addEventListener("click", nextPhoto);
+
+
+    // Close when clicking outside the gallery
+
+    involvementGallery.addEventListener("click", (event) => {
+
+        if (event.target === involvementGallery) {
+
+            const bounds = involvementGallery.getBoundingClientRect();
+
+            const outside =
+                event.clientX < bounds.left ||
+                event.clientX > bounds.right ||
+                event.clientY < bounds.top ||
+                event.clientY > bounds.bottom;
+
+            if (outside) {
+                closePhotoGallery();
+            }
+
+        }
+
+    });
+
+
+    // Keyboard navigation
+
+    involvementGallery.addEventListener("keydown", (event) => {
+
+        if (event.key === "ArrowLeft") {
+
+            event.preventDefault();
+
+            previousPhoto();
+
+        }
+
+        if (event.key === "ArrowRight") {
+
+            event.preventDefault();
+
+            nextPhoto();
+
+        }
+
+    });
+
+
+    // Render the newly created Lucide icons
+
+    if (typeof lucide !== "undefined") {
+
+        lucide.createIcons();
+
+    }
+
+}

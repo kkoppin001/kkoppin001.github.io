@@ -2674,3 +2674,254 @@ body.gallery-open {
 .awards-grid:not(.greek-awards-grid) .award-image {
     object-position: center 20%;
 }
+
+
+/* ====================================== */
+/* Involvement Photo Gallery              */
+/* ====================================== */
+
+.involvement-photo-trigger {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: zoom-in;
+    overflow: hidden;
+}
+
+.involvement-photo-trigger img {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.involvement-photo-trigger:hover img {
+    transform: scale(1.04);
+}
+
+.involvement-photo-trigger:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: -3px;
+}
+
+.photo-expand-icon {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background-color: rgba(32, 59, 92, 0.85);
+    color: white;
+    border-radius: 50%;
+    opacity: 0;
+    transition: var(--transition);
+    pointer-events: none;
+}
+
+.photo-expand-icon .lucide {
+    width: 18px;
+    height: 18px;
+    color: white;
+}
+
+.involvement-photo-trigger:hover .photo-expand-icon,
+.involvement-photo-trigger:focus-visible .photo-expand-icon {
+    opacity: 1;
+}
+
+
+/* Photo Modal */
+
+.photo-modal {
+    position: fixed;
+    inset: 0;
+    width: 90%;
+    max-width: 1000px;
+    max-height: 90dvh;
+    margin: auto;
+    padding: 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-large);
+    background-color: var(--background);
+    color: var(--text);
+    box-shadow: var(--shadow);
+    overflow: auto;
+}
+
+.photo-modal::backdrop {
+    background-color: rgba(15, 30, 50, 0.8);
+    backdrop-filter: blur(6px);
+}
+
+.photo-modal-container {
+    position: relative;
+    padding: 3.5rem 2rem 2rem;
+}
+
+body.photo-gallery-open {
+    overflow: hidden;
+}
+
+
+/* Full-size Photograph */
+
+.photo-viewer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: min(60dvh, 650px);
+    background-color: var(--surface);
+    border-radius: var(--radius-medium);
+    overflow: hidden;
+}
+
+#photo-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* Gallery Controls */
+
+.photo-close,
+.photo-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.photo-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    width: 36px;
+    height: 36px;
+    font-size: 1.75rem;
+    background-color: var(--surface);
+    color: var(--deep-navy);
+    z-index: 5;
+}
+
+.photo-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    font-size: 1.25rem;
+    background-color: rgba(32, 59, 92, 0.85);
+    color: white;
+    z-index: 5;
+}
+
+.photo-prev {
+    left: 1rem;
+}
+
+.photo-next {
+    right: 1rem;
+}
+
+.photo-close:hover,
+.photo-arrow:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+.photo-modal [hidden] {
+    display: none !important;
+}
+
+
+/* Photo Information */
+
+.photo-information {
+    text-align: center;
+    padding-top: 1.5rem;
+}
+
+.photo-information h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+#photo-counter {
+    color: var(--primary);
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+
+/* Service Polaroid Compatibility */
+
+.service-polaroid .involvement-photo-trigger {
+    height: 100%;
+}
+
+
+/* Mobile Photo Gallery */
+
+@media (max-width: 600px) {
+
+    .photo-modal {
+        width: 95%;
+    }
+
+    .photo-modal-container {
+        padding: 3.5rem 1rem 1.5rem;
+    }
+
+    .photo-viewer {
+        height: 50dvh;
+    }
+
+    .photo-arrow {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+    }
+
+    .photo-prev {
+        left: 0.5rem;
+    }
+
+    .photo-next {
+        right: 0.5rem;
+    }
+
+    .photo-information h2 {
+        font-size: 1.15rem;
+    }
+
+}
+
+@media (hover: none) {
+
+    .photo-expand-icon {
+        opacity: 1;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .involvement-photo-trigger img {
+        transition: none;
+    }
+
+    .involvement-photo-trigger:hover img {
+        transform: none;
+    }
+
+}
