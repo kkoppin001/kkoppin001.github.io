@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="View Kalli Koppin's professional resume.">
+    <meta name="description" content="View and download Kalli Koppin's professional resume.">
 
     <title>Kalli Koppin | Resume</title>
 
@@ -16,6 +16,7 @@
 
     <!-- Navigation -->
     <header class="header">
+
         <nav class="navbar container" aria-label="Main navigation">
 
             <a href="index.html" class="logo">KK.</a>
@@ -42,6 +43,7 @@
             </ul>
 
         </nav>
+
     </header>
 
     <main class="container resume-page">
@@ -59,45 +61,73 @@
                 A little more about what I bring to the table. ♡
             </p>
 
-        </section>
+            <!-- Resume Actions -->
+            <div class="resume-actions">
 
-        <!-- Resume Actions -->
-        <div class="resume-actions">
+                <a
+                    href="assets/documents/November%202026%20Resume.pdf"
+                    class="btn btn-primary"
+                    download="Kalli-Koppin-Resume.pdf"
+                >
+                    ↓ Download Resume
+                </a>
 
-            <!-- TODO: Connect buttons to resume PDF -->
-
-            <button class="btn btn-primary" type="button" disabled>
-                ↓ Download Resume
-            </button>
-
-            <button class="btn btn-secondary" type="button" disabled>
-                Open PDF ↗
-            </button>
-
-        </div>
-
-        <!-- Resume Preview -->
-        <section class="resume-section">
-
-            <div class="resume-card">
-
-                <!-- TODO: Replace placeholder with embedded resume PDF -->
-
-                <div class="resume-placeholder">
-
-                    <span class="resume-icon">📄</span>
-
-                    <h2>Resume Preview</h2>
-
-                    <p>Resume PDF goes here.</p>
-
-                </div>
+                <a
+                    href="assets/documents/November%202026%20Resume.pdf"
+                    class="btn btn-secondary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Open PDF ↗
+                </a>
 
             </div>
 
         </section>
 
-        <!-- Experience Call to Action -->
+
+        <!-- Resume PDF Preview -->
+        <section class="resume-section">
+
+            <div class="resume-card">
+
+                <object
+                    data="assets/documents/November%202026%20Resume.pdf"
+                    type="application/pdf"
+                    class="resume-preview"
+                    aria-label="Kalli Koppin's Resume"
+                >
+
+                    <div class="resume-placeholder">
+
+                        <span class="resume-icon">📄</span>
+
+                        <h2>Resume Preview</h2>
+
+                        <p>
+                            Your browser does not support
+                            embedded PDF previews.
+                        </p>
+
+                        <a
+                            href="assets/documents/November%202026%20Resume.pdf"
+                            class="btn btn-primary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Open Resume ↗
+                        </a>
+
+                    </div>
+
+                </object>
+
+            </div>
+
+        </section>
+
+
+        <!-- Call to Action -->
         <section class="resume-cta-section">
 
             <div class="resume-cta">
@@ -109,17 +139,24 @@
                 <h2>There's more to my story.</h2>
 
                 <p>
-                    Explore my professional experience, education,
-                    technical skills, and the projects I've worked on.
+                    Explore my professional experience,
+                    education, technical skills, and
+                    the projects I've worked on.
                 </p>
 
                 <div class="resume-actions">
 
-                    <a href="experience.html" class="btn btn-primary">
+                    <a
+                        href="experience.html"
+                        class="btn btn-primary"
+                    >
                         View my experience
                     </a>
 
-                    <a href="projects.html" class="btn btn-secondary">
+                    <a
+                        href="projects.html"
+                        class="btn btn-secondary"
+                    >
                         Explore my projects
                     </a>
 
@@ -131,11 +168,14 @@
 
     </main>
 
+
     <!-- Footer -->
     <footer class="footer">
+
         <div class="container">
             <p>Made with ♡</p>
         </div>
+
     </footer>
 
 </body>
